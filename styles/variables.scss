@@ -1,0 +1,27 @@
+// COLORS
+$textColor1: #242d49;
+$textColor2: black;
+$textColor3: #788097;
+$textColor4: #83b0fe;
+$textColor5: #4f8efc;
+$themeColor: #fcae32;
+$themeColor1: #fb9731;
+$themeColor2: #fdc103;
+$themeColor3: #33527d;
+$themeColor4: #5b92dd;
+
+// VALUES
+$containerWidth: calc(100% - 20vw);
+
+@mixin flexBox($alignItems: center, $direction: row, $justify: start) {
+    display: flex;
+    align-items: $alignItems;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin getDropShadowBackground($color) {
+    background: radial-gradient(circle, $color 0%, rgba(255, 255, 255, 1) 100%);
+    // filter: drop-shadow(0px 0px 40px rgba($color, 1));
+    box-shadow: 0px 0px 1000px rgba($color, 1);
+}

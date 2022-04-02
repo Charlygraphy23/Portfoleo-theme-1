@@ -1,0 +1,223 @@
+.technologies {
+    @include flexBox(flex-start, row, center);
+    margin-top: 5rem;
+    position: relative;
+
+    .technologies__container {
+        width: $containerWidth;
+
+        .leftTechnologySection {
+            height: 100%;
+            @include flexBox(flex-start, column, center);
+
+            .heading1,
+            .heading2 {
+                font-size: 2.5rem;
+            }
+
+            .sub__heading {
+                margin-top: 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .rightTechnologySection {
+            height: 100%;
+            @include flexBox(center, column, center);
+            position: relative;
+            min-height: 28rem;
+
+            .background__disc {
+                width: 25rem;
+                height: 85%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include flexBox(center, row, center);
+                // pointer-events: none;
+                transform: translate(-50%, -50%);
+
+                .background__disc-container {
+                    width: 100%;
+                    height: 100%;
+                    @include flexBox(center, row, center);
+                    position: relative;
+                    // pointer-events: none;
+                    background-color: white;
+                    border-radius: 50%;
+                    box-shadow: -5px 2px 10px rgba(black, 0.1);
+
+                    &::after {
+                        position: absolute;
+                        top: 11rem;
+                        right: 0rem;
+                        width: 17rem;
+                        height: 60%;
+                        background: $themeColor3;
+                        content: " ";
+                        border-radius: 50%;
+                        z-index: -1;
+                        // pointer-events: none;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        bottom: 11rem;
+                        right: 0rem;
+                        width: 17rem;
+                        height: 60%;
+                        background: $themeColor;
+                        content: " ";
+                        border-radius: 50%;
+                        z-index: -1;
+                        // pointer-events: none;
+                    }
+
+                    .background__disc-child {
+                        background-color: white;
+                        width: 75%;
+                        height: 75%;
+                        border-radius: 50%;
+                        @include flexBox(center, row, center);
+                        box-shadow: 0px 0px 10px rgba(black, 0.1);
+                        z-index: 1;
+                        // pointer-events: none;
+                    }
+                }
+            }
+
+            .rightTechnologySection__container {
+                @include flexBox(center, column, center);
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                position: relative;
+
+                .tech__container {
+                    @include flexBox(center, row, space-around);
+                    width: 70%;
+                    margin-bottom: 2rem;
+
+                    .image__container {
+                        width: 5rem;
+                        height: 5rem;
+                        padding: 0.8rem;
+                        background-color: white;
+                        border-radius: 50%;
+                        @include flexBox(center, row, center);
+                        box-shadow: 5px 10px 10px rgba(black, 0.1);
+
+                        & > img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .dropShadow {
+                    width: max(10vw, 20rem);
+                    height: max(10vw, 20rem);
+                    right: 0%;
+                    left: auto;
+                    top: 100%;
+                    @include getDropShadowBackground(#dbf8fe);
+                    bottom: auto;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .dropShadow {
+            width: max(30vw, 20rem);
+            height: max(30vw, 20rem);
+            left: calc(0% - 10%);
+            @include getDropShadowBackground(#e5e2fe);
+            bottom: auto;
+            z-index: -1;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    $containerWidth: calc(100% - 10vw);
+
+    .technologies {
+        .technologies__container {
+            width: $containerWidth;
+
+            .leftTechnologySection {
+                .heading1,
+                .heading2 {
+                    font-size: 2rem;
+                }
+            }
+
+            .rightTechnologySection {
+                .rightTechnologySection__container {
+                    .tech__container {
+                        .image__container {
+                            width: 4rem;
+                            height: 4rem;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    $containerWidth: calc(100% - 10vw);
+
+    .technologies {
+        .technologies__container {
+            width: $containerWidth;
+
+            .leftTechnologySection {
+                .heading1,
+                .heading2 {
+                    font-size: 1.5rem;
+                }
+
+                .sub__heading {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .rightTechnologySection {
+                .background__disc {
+                    width: 20rem;
+                    height: 75%;
+
+                    .background__disc-container {
+                        &::after {
+                            position: absolute;
+                            top: 9rem;
+                            right: 1rem;
+                            width: 15rem;
+                            height: 60%;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            bottom: 9rem;
+                            right: 1rem;
+                            width: 15rem;
+                            height: 60%;
+                        }
+                    }
+                }
+
+                .rightTechnologySection__container {
+                    .tech__container {
+                        .image__container {
+                            width: 3rem;
+                            height: 3rem;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

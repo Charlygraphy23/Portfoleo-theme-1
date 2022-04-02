@@ -1,0 +1,114 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+
+//COMPONENT STYLE
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/service.scss";
+@import "./components/clientProjects.scss";
+@import "./components/technologies.scss";
+@import "./components/recentProject.scss";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica, Arial, Helvetica Neue, sans-serif;
+  min-width: 350px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.primary__button {
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 1.3em;
+  background: linear-gradient(0deg, #{$themeColor1} 0%, #{$themeColor2} 100%);
+  width: 9.5em;
+  min-height: 2.7em;
+  padding: 0.2em 0.5em;
+  position: relative;
+  z-index: inherit;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    &::after {
+      filter: drop-shadow(0px 20px 10px rgba($themeColor, 0.5));
+    }
+  }
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6em;
+    height: 2em;
+    z-index: -1;
+    border-radius: 50%;
+    background: rgba($themeColor, 1);
+    filter: drop-shadow(0px 10px 10px rgba($themeColor, 0.5));
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.secondary__button {
+  color: $textColor5;
+  background: white;
+  border: 2px solid transparent;
+  box-shadow: -10px 10px 50px rgba($textColor4, 0.4);
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  z-index: inherit;
+  width: 9.5em;
+  min-height: 2.5em;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: -10px 5px 40px rgba($textColor4, 0.5);
+    border-color: $textColor4;
+  }
+}
+
+.heading1 {
+  color: $textColor1;
+  margin: 0;
+  font-weight: 600;
+}
+
+.heading2 {
+  margin: 0;
+  color: $themeColor;
+  font-weight: 600;
+}
+
+.dropShadow {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .primary__button {
+    font-size: 0.8rem;
+  }
+}
