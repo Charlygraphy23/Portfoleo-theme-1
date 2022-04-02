@@ -5,7 +5,7 @@ import ServiceCard from "./components/ServiceCard";
 
 const ServiceSection = () => {
   return (
-    <div className="serviceSection mt-5">
+    <div className="serviceSection mt-5" id="services">
       <div className="row m-0 serviceSection__container">
         <div className="col-lg-7 mb-3">
           <LeftServiceSection />

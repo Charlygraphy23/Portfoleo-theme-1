@@ -1,9 +1,8 @@
-import Link from "next/link";
 import React from "react";
 
 const Header = () => {
   return (
-    <div className="header">
+    <nav className="header" id="header">
       <div className="header__container">
         <div className="brand">
           <h1>Portfolio</h1>
@@ -12,11 +11,11 @@ const Header = () => {
         <div className="header__collapse">
           <ul className="header__collapse-links">
             <li className="active">
-              <Link href={"/"}>Home</Link>
+              <a href="#">Home</a>
             </li>
 
             <li>
-              <Link href={"/services"}>Services</Link>
+              <a href="#services">Services</a>
             </li>
           </ul>
 
@@ -25,7 +24,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -8,7 +8,7 @@ import Technologies from "../components/technologies";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div data-bs-spy="scroll" data-bs-target="#header" data-bs-offset="0">
       <Header />
       <HeroSection />
       <ServiceSection />
