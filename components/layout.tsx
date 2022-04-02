@@ -1,12 +1,16 @@
+import { init } from "@emailjs/browser";
 import Head from "next/head";
 import Script from "next/script";
 import React from "react";
+import ContactMe from "./contact";
 
 type Props = {
   children: JSX.Element;
 };
 
 const Layout = ({ children }: Props) => {
+  init("JQrVHKPVX62Zpyqu0");
+
   return (
     <>
       <Head>
@@ -32,6 +36,9 @@ const Layout = ({ children }: Props) => {
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         />
         {children}
+
+        {/* // Modal */}
+        <ContactMe />
       </main>
     </>
   );

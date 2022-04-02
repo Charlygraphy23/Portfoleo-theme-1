@@ -8,6 +8,7 @@
 @import "./components/clientProjects.scss";
 @import "./components/technologies.scss";
 @import "./components/recentProject.scss";
+@import "./components/contactMe.scss";
 
 * {
   margin: 0;
@@ -102,6 +103,58 @@ a {
   border-radius: 50%;
   z-index: -1;
   pointer-events: none;
+}
+
+.input__group {
+  @include flexBox(flex-start, column, center);
+  width: 100%;
+  font-size: inherit;
+
+  & > label {
+    font-weight: 600;
+    width: 100%;
+
+    & > span:first-child {
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    .input__container {
+      @include flexBox(center, row, flex-start);
+      position: relative;
+      $iconPadding: 2em;
+
+      & > input {
+        min-height: 3em;
+        flex: 1;
+        padding: 0em calc($iconPadding + 0.3em);
+        outline: none;
+        color: rgba(black, 0.8);
+        border: 3px solid rgba(black, 0.1);
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          border-color: $themeColor4;
+        }
+      }
+
+      & > .icon {
+        @include flexBox(center, row, center);
+        width: $iconPadding;
+        height: 2em;
+        font-size: 1.1em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  width: 100%;
 }
 
 @media screen and (max-width: 520px) {
