@@ -2,6 +2,8 @@ import { init } from "@emailjs/browser";
 import Head from "next/head";
 import Script from "next/script";
 import React from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ContactMe from "./contact";
 
 type Props = {
@@ -9,7 +11,8 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  init("JQrVHKPVX62Zpyqu0");
+  // @ts-expect-error
+  init(process.env.EMAILJS_USER_ID);
 
   return (
     <>
@@ -35,6 +38,15 @@ const Layout = ({ children }: Props) => {
           id="bootstrap-cdn"
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         />
+
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+        />
+
         {children}
 
         {/* // Modal */}

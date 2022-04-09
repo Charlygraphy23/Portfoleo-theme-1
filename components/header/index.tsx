@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../../store/index";
 
 const Header = () => {
+  const store = useContext(AppContext);
+
   return (
     <nav className="header" id="header">
       <div className="header__container">
@@ -22,8 +25,9 @@ const Header = () => {
           <div className="header__collapse-contact">
             <button
               type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#contactMeForm"
+              onClick={() => {
+                store?.dispatch({ contactMeModalShow: true });
+              }}
               className="primary__button"
             >
               Contact Me
