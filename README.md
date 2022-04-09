@@ -51,7 +51,7 @@ here is the Demo Link - [Demo App](https://protfolio-theme-1.vercel.app/)
 
 ## Preview
 
-![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture1.PNG)
-![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture2.PNG)
-![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture3.PNG)
-![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture4.PNG)
+![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture1.png?raw=true)
+![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture2.png?raw=true)
+![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture3.png?raw=true)
+![alt text](https://github.com/Charlygraphy23/Portfolio-theme-1/blob/main/screenshots/Capture4.png?raw=true)
