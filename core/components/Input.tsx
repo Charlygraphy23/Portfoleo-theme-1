@@ -24,7 +24,7 @@ const Input = ({
   autoComplete = false,
   iconClassName = "",
   onChange,
-  value = "",
+  value = " ",
 }: Props) => {
   const inputId = useMemo(() => nanoid(), []);
 
