@@ -3,7 +3,7 @@ import React from "react";
 const LeftTechnologySection = () => {
   return (
     <div className="leftTechnologySection">
-      <h1 className="heading1">My Expertise</h1>
+      <h1 className="heading1">Our Expertise</h1>
       <h1 className="heading2 mt-1">Technologies</h1>
 
       <p className="sub__heading">

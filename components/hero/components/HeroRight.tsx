@@ -7,7 +7,7 @@ const HeroRight = () => {
         <img className="emojis" src="assets/smile.png" alt="" />
       </a>
       <div className="avatar__container">
-        <img src="assets/avatar-background4.png" alt="avatar-background" />
+        <img src="assets/companey-logo.png" alt="avatar-background" />
       </div>
     </div>
   );

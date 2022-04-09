@@ -9,19 +9,19 @@ const HeroLeft = () => {
       </h1>
       <div className="d-flex align-items-end mt-1">
         <h1 className="title" style={{ marginRight: "0.7rem" }}>
-          I,
+          We'r,
         </h1>
-        <h1 className="title__name">First Name</h1>
+        <h1 className="title__name">Dartcube</h1>
       </div>
 
       <div className="title__sub">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta libero
-        vel quia, deserunt soluta, ducimus dolorem consequuntur laudantium
-        doloribus dignissimos iusto nulla, quo sed quae aut fugiat qui autem
-        nobis?
+        We are a team of professional developers who craft solutions. We value
+        our customers' time, so delivering effective solutions on time, which
+        are efficient as well, is our priority. Our services include mobile
+        applications(Android and iOS) and web applications.
       </div>
 
-      <button className="primary__button mt-5">Hire Me</button>
+      <button className="primary__button mt-5">Hire Us</button>
     </div>
   );
 };
