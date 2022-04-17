@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react";
+import ProjectCard from "./components/ProjectCard";
 
 const RecentProjects = () => {
   const [active, setActive] = useState(1);
@@ -69,25 +70,7 @@ const RecentProjects = () => {
               {Array(4)
                 .fill(0)
                 .map((val, i) => (
-                  <div
-                    className={`projectCard ${
-                      i == active ? "active" : i < active ? "left" : "right"
-                    }`}
-                  >
-                    <div className="projectCard__container">
-                      <img
-                        src="https://images.pexels.com/photos/2564475/pexels-photo-2564475.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt=""
-                      />
-                      <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Fugiat necessitatibus velit ratione quidem enim
-                        quod sapiente magnam ipsum tempore nemo, quis officiis
-                        delectus animi explicabo et quaerat molestiae voluptatem
-                        ab.
-                      </p>
-                    </div>
-                  </div>
+                  <ProjectCard active={active} index={i} />
                 ))}
             </div>
           </div>
