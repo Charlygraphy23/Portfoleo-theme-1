@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 const RightServiceSection = () => {
   return (
     <div className="rightService">
-      <ServiceCard title="Design" />
+      <ServiceCard title="Mobile Application Development" />
     </div>
   );
 };

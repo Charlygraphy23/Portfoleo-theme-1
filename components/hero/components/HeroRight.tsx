@@ -3,9 +3,7 @@ import React from "react";
 const HeroRight = () => {
   return (
     <div className="heroRight">
-      <a href="https://www.freepik.com/vectors/background">
-        <img className="emojis" src="assets/smile.png" alt="" />
-      </a>
+      <img className="emojis" src="assets/smile.png" alt="" />
       <div className="avatar__container">
         <img src="assets/companey-logo.png" alt="avatar-background" />
       </div>

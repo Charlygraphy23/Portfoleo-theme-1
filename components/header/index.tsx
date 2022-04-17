@@ -8,7 +8,7 @@ const Header = () => {
     <nav className="header" id="header">
       <div className="header__container">
         <div className="brand">
-          <h1>Portfolio</h1>
+          <h1></h1>
         </div>
 
         <div className="header__collapse">
@@ -30,7 +30,7 @@ const Header = () => {
               }}
               className="primary__button"
             >
-              Contact Me
+              Contact Us
             </button>
           </div>
         </div>

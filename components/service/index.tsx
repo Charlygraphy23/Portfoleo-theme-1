@@ -24,14 +24,20 @@ const ServiceSection = () => {
             padding: 0,
           }}
         >
-          <div className="col-md-6 mb-3 ">
+          <div className="col-md-4 mb-3 ">
             <div className="d-flex justify-content-end">
-              <ServiceCard style={{ marginTop: "-3.5rem" }} title="Developer" />
+              <ServiceCard
+                style={{ marginTop: "-3.5rem" }}
+                title="Website Development"
+              />
             </div>
           </div>
 
-          <div className="col-md-6 mb-3">
-            <ServiceCard title="Ui/Ux" />
+          <div className="col-md-4 mb-3">
+            <ServiceCard title="Server Development" />
+          </div>
+          <div className="col-md-4 mb-3">
+            <ServiceCard title="Test application" />
           </div>
         </div>
       </div>

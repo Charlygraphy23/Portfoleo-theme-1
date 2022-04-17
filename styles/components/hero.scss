@@ -21,7 +21,6 @@
             .title {
                 color: $textColor1;
                 font-size: inherit;
-
                 margin: 0;
             }
 
@@ -50,6 +49,7 @@
                 max-width: 4rem;
                 object-fit: contain;
                 z-index: 10;
+                animation: emoji-animation 4s ease-in-out infinite;
             }
 
             .avatar__container {
@@ -73,6 +73,20 @@
             @include getDropShadowBackground(#dbf8fe);
             transform: translateX(-50%);
         }
+    }
+}
+
+@keyframes emoji-animation {
+    0% {
+        top: -1.2rem;
+    }
+
+    50% {
+        top: 1.2rem;
+    }
+
+    100% {
+        top: -1.2rem;
     }
 }
 
