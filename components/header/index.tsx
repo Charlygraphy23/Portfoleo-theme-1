@@ -1,34 +1,34 @@
-import React, { useContext } from "react";
-import AppContext from "../../store/index";
+import React, { useContext } from 'react';
+import AppContext from '../../store/index';
 
 const Header = () => {
   const store = useContext(AppContext);
 
   return (
-    <nav className="header" id="header">
-      <div className="header__container">
-        <div className="brand">
+    <nav className='header' id='header'>
+      <div className='header__container'>
+        {/* <div className="brand">
           <h1></h1>
-        </div>
+        </div> */}
 
-        <div className="header__collapse">
-          <ul className="header__collapse-links">
-            <li className="">
-              <a href="#">Home</a>
+        <div className='header__collapse'>
+          <ul className='header__collapse-links'>
+            <li className=''>
+              <a href='#/'>Home</a>
             </li>
 
             <li>
-              <a href="#services">Services</a>
+              <a href='#services'>Services</a>
             </li>
           </ul>
 
-          <div className="header__collapse-contact">
+          <div className='header__collapse-contact'>
             <button
-              type="button"
+              type='button'
               onClick={() => {
                 store?.dispatch({ contactMeModalShow: true });
               }}
-              className="primary__button"
+              className='primary__button'
             >
               Contact Us
             </button>
