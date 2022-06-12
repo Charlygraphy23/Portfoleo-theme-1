@@ -1,7 +1,14 @@
 import React, { useCallback } from "react";
+import { RecentProjectsType } from "../../../interface";
 import ProjectCarousalScroll from "./ProjectCarousalScroll";
 
-const ProjectCarousal = () => {
+type Props = {
+  recentProjects: RecentProjectsType | null,
+  loadingImage: string
+}
+
+
+const ProjectCarousal = (props: Props) => {
   const handlePrev = useCallback((e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
 
@@ -44,7 +51,7 @@ const ProjectCarousal = () => {
         <button onClick={handleNext}>Next</button>
       </div>
 
-      <ProjectCarousalScroll id="carousal__height" />
+      <ProjectCarousalScroll id="carousal__height" {...props} />
     </div>
   );
 };

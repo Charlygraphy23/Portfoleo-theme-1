@@ -1,16 +1,19 @@
-import React, { useMemo } from "react";
-import { TECH_IMAGES } from "../../../../config/app";
+import React from "react";
+import { TechnologyType } from "../../../../interface";
 import TechImage from "./components/TechImage";
 
-const RightTechnologySection = () => {
-  const IMAGES = useMemo(() => TECH_IMAGES, []);
+type Props = {
+  technology: TechnologyType
+}
+
+const RightTechnologySection = ({ technology }: Props) => {
 
   return (
     <div className="rightTechnologySection">
       <div className="rightTechnologySection__container">
-        {IMAGES.map((val, i) => (
+        {technology?.techImages?.map((val, i) => (
           <div key={i} className="tech__container">
-            {val.section.map((image, j) => (
+            {val?.section.map((image: any, j: number) => (
               <TechImage
                 key={j}
                 imgUrl={image.url}

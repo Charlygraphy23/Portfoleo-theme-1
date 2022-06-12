@@ -1,7 +1,14 @@
 import React from "react";
+import { RecentProjectsType } from "../../interface";
 import ProjectCarousal from "./components/ProjectCarousal";
 
-const ClientProjects = () => {
+type Props = {
+  recentProjects: RecentProjectsType | null,
+  loadingImage: string
+}
+
+
+const ClientProjects = ({ recentProjects, loadingImage }: Props) => {
   return (
     <div className="clientProjects">
       <div className="clientProject__container">
@@ -10,7 +17,7 @@ const ClientProjects = () => {
         </h1>
         <h1 className="heading">works from me......</h1>
 
-        <ProjectCarousal />
+        <ProjectCarousal loadingImage={loadingImage} recentProjects={recentProjects} />
       </div>
     </div>
   );

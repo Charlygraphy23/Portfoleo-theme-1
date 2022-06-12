@@ -1,17 +1,21 @@
 import React from "react";
+import { RecentProjectsType } from "../../../interface";
 import ProjectCarousalCard from "./ProjectCarousalCard";
 
 type Props = {
   id: string;
+  recentProjects: RecentProjectsType | null,
+  loadingImage: string
 };
 
-const ProjectCarousalScroll = ({ id = "" }: Props) => {
+
+
+const ProjectCarousalScroll = ({ id = "", recentProjects }: Props) => {
   return (
     <div id={id} className="projectCarousal">
-      {Array(15)
-        .fill(0)
-        .map((_, i) => (
-          <ProjectCarousalCard key={i} />
+      {recentProjects?.images
+        .map((image, i) => (
+          <ProjectCarousalCard key={i} image={image} />
         ))}
     </div>
   );

@@ -1,6 +1,11 @@
 import React from "react";
+import { CompanyInfoType } from "../../../interface";
 
-const HeroLeft = () => {
+type Props = {
+  companyInfo: CompanyInfoType | null
+}
+
+const HeroLeft = ({ companyInfo }: Props) => {
   return (
     <div className="heroLeft">
       <div className="dropShadow"></div>
@@ -11,17 +16,16 @@ const HeroLeft = () => {
         <h1 className="title" style={{ marginRight: "0.7rem" }}>
           We'r,
         </h1>
-        <h1 className="title__name">Dartcube</h1>
+        <h1 className="title__name">{companyInfo?.name}</h1>
       </div>
 
       <div className="title__sub">
-        We are a team of professional developers who craft solutions. We value
-        our customers' time, so delivering effective solutions on time, which
-        are efficient as well, is our priority. Our services include mobile
-        applications(Android and iOS) and web applications.
+        {companyInfo?.description}
       </div>
 
-      <button className="primary__button mt-5">Hire Us</button>
+      {companyInfo?.hireUsLink && <a href={companyInfo?.hireUsLink} target="_blank">
+        <button className="primary__button mt-5">Hire Us</button>
+      </a>}
     </div>
   );
 };

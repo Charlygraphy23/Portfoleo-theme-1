@@ -1,17 +1,22 @@
 import React from "react";
+import { CompanyInfoType } from "../../interface";
 import HeroLeft from "./components/HeroLeft";
 import HeroRight from "./components/HeroRight";
 
-const HeroSection = () => {
+type Props = {
+  companyInfo: CompanyInfoType | null
+}
+
+const HeroSection = (props: Props) => {
   return (
     <div className="heroSection">
       <div className="row m-0 heroSection__container mt-5">
         <div className="col-lg-7 mb-4">
-          <HeroLeft />
+          <HeroLeft {...props} />
         </div>
 
         <div className="col-lg-5 mb-4">
-          <HeroRight />
+          <HeroRight {...props} />
         </div>
 
         <div className="dropShadow"></div>

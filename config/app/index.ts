@@ -1,3 +1,6 @@
+export * from './firebase';
+
+
 export const TECH_IMAGES = [
   {
     section: [

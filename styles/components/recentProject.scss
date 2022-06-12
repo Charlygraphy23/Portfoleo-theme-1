@@ -23,14 +23,24 @@
             margin-top: 2rem !important;
             margin-bottom: 4rem !important;
             min-height: 10rem;
+            width: 100%;
 
             .cols {
                 border-radius: 10px;
                 overflow: hidden;
 
-                img {
+                .image__container {
                     width: 100%;
-                    border-radius: 10px;
+                    position: relative;
+                    display: block;
+                    position: relative;
+                    min-height: 400px;
+
+                    img {
+                        border-radius: 10px;
+                        object-fit: contain;
+                        width: 100% !important;
+                    }
                 }
             }
         }
