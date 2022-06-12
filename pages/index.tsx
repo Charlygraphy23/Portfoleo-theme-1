@@ -46,10 +46,13 @@ const Home = (props: Props) => {
 export const getServerSideProps: GetServerSideProps = async () => {
 
 
+  const [recentProjects, technology, companyInfo] = await Promise.all([
+    getRecentProjectData('1'),
+    getTechnologyData('1'),
+    getCompanyInfo('1')
+  ]);
 
-  const recentProjects = await getRecentProjectData('1');
-  const technology = await getTechnologyData('1');
-  const companyInfo = await getCompanyInfo('1');
+
 
   return {
     props: {
