@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import type { GetServerSideProps } from 'next';
-import { getPlaiceholder } from 'plaiceholder';
 import ClientProjects from '../components/ClientProjects';
 import Header from '../components/header';
 import HeroSection from '../components/hero';
@@ -20,13 +19,12 @@ import {
 
 type Props = {
   recentProjects: RecentProjectsType | null;
-  loadingImage: string;
   technology: TechnologyType;
   companyInfo: CompanyInfoType | null;
 };
 
 const Home = (props: Props) => {
-  const { recentProjects, loadingImage, technology, companyInfo } = props;
+  const { recentProjects, technology, companyInfo } = props;
   return (
     <div data-bs-spy='scroll' data-bs-target='#header' data-bs-offset='0'>
       <Header />
@@ -34,19 +32,20 @@ const Home = (props: Props) => {
       <ServiceSection />
       <ClientProjects
         recentProjects={recentProjects}
-        loadingImage={loadingImage}
+        loadingImage='/assets/loading.png'
       />
       <Technologies technology={technology} />
       <RecentProjects
         recentProjects={recentProjects}
-        loadingImage={loadingImage}
+        loadingImage='/assets/loading.png'
       />
     </div>
   );
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const { base64 } = await getPlaiceholder('/assets/loading.png');
+
+
 
   const recentProjects = await getRecentProjectData('1');
   const technology = await getTechnologyData('1');
@@ -55,7 +54,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       recentProjects: recentProjects.exists() ? recentProjects.data() : null,
-      loadingImage: base64,
       technology,
       companyInfo,
     },
